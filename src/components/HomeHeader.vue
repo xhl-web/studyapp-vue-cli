@@ -4,7 +4,7 @@
        <span class="iconfont back-icon">&#xe743;</span>
     </div>
     <div class="header-text">本地生活宝</div>
-    <div class="header-right">南昌
+    <div class="header-right"> 南昌
       <span class="iconfont bouttom-icon">&#xe6aa;</span>
     </div>
   </div>
@@ -18,11 +18,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
+@import '../assets/styles/varibles.styl'
   .header
     display: flex
     line-height: .90rem
     text-align: center
-    background-color: #6F7F96
+    background-color: $bgcolor
     color: #fff
   .header-left
     width: .64rem
