@@ -1,11 +1,15 @@
 <template>
   <div class="header">
     <div class="header-left">
+      <router-link to="/">
        <span class="iconfont back-icon">&#xe743;</span>
+      </router-link>
     </div>
     <div class="header-text">本地生活宝</div>
     <div class="header-right"> 南昌
+      <router-link to="/City">
       <span class="iconfont bouttom-icon">&#xe6aa;</span>
+      </router-link>
     </div>
   </div>
 </template>
@@ -18,7 +22,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
-@import '../assets/styles/varibles.styl'
+@import '../../assets/styles/varibles.styl'
   .header
     display: flex
     line-height: .90rem
@@ -30,6 +34,7 @@ export default {
     float: left
   .back-icon
     font-size: .5rem
+    color: #fff
   .header-text
     flex: 1
   .header-right
@@ -37,4 +42,5 @@ export default {
     float: right
   .bouttom-icon
     font-size: .3rem
+    color: #fff
 </style>

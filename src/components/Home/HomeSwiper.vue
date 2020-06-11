@@ -4,7 +4,6 @@
     <swiper-slide v-for="item of swiperList" :key="item.id">
         <img class="swiper-img" :src="item.url">
     </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
  </div>
 </template>
@@ -21,10 +20,10 @@ export default {
            },
            swiperList: [{
                id: '001',
-               url: 'http://ww1.sinaimg.cn/mw690/006ThXL5ly1fj7zx3w751j30u00dmgy3.jpg'
+               url: '/images/banner-01.png'
            },{
                id: '002',
-               url: 'http://ww1.sinaimg.cn/mw690/006ThXL5ly1fj6ckx9tlwj30u00fqk8n.jpg'
+               url: '/images/banner-02.png'
            }]
         }
     }
@@ -38,9 +37,8 @@ export default {
    overflow: hidden
    width: 100%
    height:0
-   padding-bottom: 36%
+   padding-bottom: 40%
    background: #eee
  .swiper-img
    width: 100%
-   height: 2.7rem
 </style>

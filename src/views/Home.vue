@@ -1,20 +1,21 @@
 <template>
   <div>
-    <home-header></home-header>
     <home-swiper></home-swiper>
+    <home-content></home-content>
+    <div>网站建设中.....</div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomeHeader from '@/components/HomeHeader.vue'
-import HomeSwiper from '@/components/HomeSwiper.vue'
+import HomeSwiper from '@/components/Home/HomeSwiper.vue'
+import HomeContent from '@/components/Home/HomeContent.vue'
 
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
-    HomeSwiper
+    HomeSwiper,
+    HomeContent
   }
 }
 </script>
