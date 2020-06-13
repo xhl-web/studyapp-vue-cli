@@ -1,47 +1,56 @@
 <template>
   <div class="content">
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-01.png">
-         <span class="text">美食</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-02.png">
-         <span class="text">洗浴足疗</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-03.png">
-         <span class="text">结婚啦</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-04.png">
-         <span class="text">ktv</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-05.png">
-         <span class="text">找工作</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-06.png">
-         <span class="text">辅导班</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-07.png">
-         <span class="text">汽车保养</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-08.png">
-         <span class="text">租房</span>
-     </div>
-     <div class="content-item">
-         <img class="content-img" src="/images/grid-09.png">
-         <span class="text">装修</span>
+     <div class="content-item" v-for="item of ContentList" :key="item.id">
+         <img class="content-img" :src="item.url">
+         <span class="text">{{item.text}}</span>
      </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeContent'
+  name: 'HomeContent',
+  data (){
+    return {
+      ContentList: [{
+        id: '0001',
+        url: '/images/grid-01.png',
+        text: '美食'
+      },{
+        id: '0002',
+        url: '/images/grid-02.png',
+        text: '洗浴足疗'
+      },{
+        id: '0003',
+        url: '/images/grid-03.png',
+        text: '结婚啦'
+      },{
+        id: '0004',
+        url: '/images/grid-04.png',
+        text: 'KTV'
+      },{
+        id: '0005',
+        url: '/images/grid-05.png',
+        text: '找工作'
+      },{
+        id: '0006',
+        url: '/images/grid-06.png',
+        text: '辅导班'
+      },{
+        id: '0007',
+        url: '/images/grid-07.png',
+        text: '汽车保养'
+      },{
+        id: '0008',
+        url: '/images/grid-08.png',
+        text: '租房'
+      },{
+        id: '0009',
+        url: '/images/grid-09.png',
+        text: '装修'
+      }]
+    }
+  }
 }
 </script>
 
@@ -55,6 +64,7 @@ export default {
     color: #888
     border-top: 0.02rem solid #eee
     border-left: 0.02rem solid #eee
+    border-bottom: 0.07rem solid #f0f0f0
     .content-item
       display: flex
       flex-direction: column

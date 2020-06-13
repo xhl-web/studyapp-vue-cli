@@ -6,11 +6,11 @@
       </router-link>
     </div>
     <div class="header-text">本地生活宝</div>
-    <div class="header-right"> 南昌
-      <router-link to="/City">
+  <router-link to="/City">
+    <div class="header-right">南昌
       <span class="iconfont bouttom-icon">&#xe6aa;</span>
-      </router-link>
     </div>
+  </router-link>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 @import '../../assets/styles/varibles.styl'
   .header
     display: flex
-    line-height: .90rem
+    line-height: .9rem
     text-align: center
     background-color: $bgcolor
     color: #fff
@@ -40,6 +40,7 @@ export default {
   .header-right
     width: 1.24rem
     float: right
+    color: #fff
   .bouttom-icon
     font-size: .3rem
     color: #fff

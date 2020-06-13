@@ -1,7 +1,6 @@
 //根组件
 <template>
   <div id="app">
-    <home-header></home-header>
     <router-view></router-view>
     <div class="navbox">
       <div class="homenavs">
@@ -28,11 +27,9 @@
   </div>
 </template>
 <script>
-import HomeHeader from '@/components/Home/HomeHeader.vue'
+
 export default {
-  components: {
-    HomeHeader
-  }
+
 }
 </script>
 <style lang="stylus" scoped>
