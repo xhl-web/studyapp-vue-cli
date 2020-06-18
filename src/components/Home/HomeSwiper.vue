@@ -1,7 +1,7 @@
 <template>
  <div class="wrapper">
     <swiper :options="swiperOptions">
-    <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper-slide v-for="item of HomeImagesUrlList" :key="item.id">
         <img class="swiper-img" :src="item.url">
     </swiper-slide>
   </swiper>
@@ -11,6 +11,9 @@
 <script>
 export default {
     name: 'HomeSwiper',
+    props: {
+      homeImgUrl: Array
+    },
     data () {
         return {
            swiperOptions: {
@@ -18,12 +21,12 @@ export default {
                autoplay: 4000,
                loop: true
            },
-           swiperList: [{
-               id: '001',
-               url: '/images/banner-01.png'
+           HomeImagesUrlList: [{
+             id: '001',
+             url: 'images/banner-01.png'
            },{
-               id: '002',
-               url: '/images/banner-02.png'
+             id: '002',
+             url: 'images/banner-02.png'
            }]
         }
     }

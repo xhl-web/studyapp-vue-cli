@@ -1,54 +1,73 @@
 <template>
   <div class="content">
-     <div class="content-item" v-for="item of ContentList" :key="item.id">
-         <img class="content-img" :src="item.url">
-         <span class="text">{{item.text}}</span>
+    <router-link to="/ContentData" class="content">
+     <div class="content-item" v-for="(item,index) of HomeContentIconUrlList" :key="item.id" @click="handleIdexClick(index)">
+         <img class="content-img" :src="item.icon">
+         <span class="text">{{ item.name }}</span>
      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HomeContent',
-  data (){
+  props: {
+     homeContent: Array
+  },
+  data () {
     return {
-      ContentList: [{
-        id: '0001',
-        url: '/images/grid-01.png',
-        text: '美食'
-      },{
-        id: '0002',
-        url: '/images/grid-02.png',
-        text: '洗浴足疗'
-      },{
-        id: '0003',
-        url: '/images/grid-03.png',
-        text: '结婚啦'
-      },{
-        id: '0004',
-        url: '/images/grid-04.png',
-        text: 'KTV'
-      },{
-        id: '0005',
-        url: '/images/grid-05.png',
-        text: '找工作'
-      },{
-        id: '0006',
-        url: '/images/grid-06.png',
-        text: '辅导班'
-      },{
-        id: '0007',
-        url: '/images/grid-07.png',
-        text: '汽车保养'
-      },{
-        id: '0008',
-        url: '/images/grid-08.png',
-        text: '租房'
-      },{
-        id: '0009',
-        url: '/images/grid-09.png',
-        text: '装修'
-      }]
+       HomeContentIconUrlList:
+  [{
+    "id": 1,
+    "name": "美食",
+    "icon": "images/grid-01.png"
+  },
+  {
+    "id": 2,
+    "name": "洗浴足疗",
+    "icon": "images/grid-02.png"
+  },
+  {
+    "id": 3,
+    "name": "结婚啦",
+    "icon": "images/grid-03.png"
+  },
+  {
+    "id": 4,
+    "name": "卡拉OK",
+    "icon": "images/grid-04.png"
+  },
+  {
+    "id": 5,
+    "name": "找工作",
+    "icon": "images/grid-05.png"
+  },
+  {
+    "id": 6,
+    "name": "辅导班",
+    "icon": "images/grid-06.png"
+  },
+  {
+    "id": 7,
+    "name": "汽车保养",
+    "icon": "images/grid-07.png"
+  },
+  {
+    "id": 8,
+    "name": "租房",
+    "icon": "images/grid-08.png"
+  },
+  {
+    "id": 9,
+    "name": "装修",
+    "icon": "images/grid-09.png"
+  }
+]}
+  },
+  methods: {
+    handleIdexClick (index) {
+      this.$emit('chang',index)
     }
   }
 }
@@ -56,7 +75,10 @@ export default {
 
 <style lang="stylus" scoped>
   .content
+    overflow hidden
     width: 100%
+    height: 0
+    padding-bottom: 100%
     display: flex
     flex-wrap: wrap
     background-color: #fff

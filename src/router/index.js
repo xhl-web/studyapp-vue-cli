@@ -5,6 +5,8 @@ import Home from '../views/Home.vue'
 import Mynews from '../views/Mynews.vue'
 import About from '../views/About.vue'
 import City from '../views/City.vue'
+import ContentData from '../views/ContentData.vue'
+import Detail from '../views/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -28,6 +30,15 @@ Vue.use(VueRouter)
     path: '/City',
     name: 'City',
     component: City
+  },
+  {
+    path: '/ContentData',
+    name: 'ContentData',
+    component: ContentData
+  },{
+    path: '/Detail/:id',
+    name: 'Detail',
+    component: Detail
   }
   // {
   //   path: '/about',

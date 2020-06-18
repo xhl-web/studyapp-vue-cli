@@ -1,14 +1,17 @@
 <template>
-  <div class="news">
-      这是消息页面
+  <div>
+      <mynews-header></mynews-header>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import MynewsHeader from '@/components/Mynews/MynewsHeader.vue'
 
 export default {
   name: 'Mynews',
+   components: {
+    MynewsHeader
+  }
 }
 </script>
 

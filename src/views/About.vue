@@ -1,14 +1,19 @@
 <template>
-  <div class="myabout">
-      这是 About页面
+  <div>
+      <about-header></about-header>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import AboutHeader from '@/components/About/AbotHeader.vue'
+
 
 export default {
   name: 'About',
+  components: {
+    AboutHeader
+  }
+
 }
 </script>
 

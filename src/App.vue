@@ -1,7 +1,7 @@
 //根组件
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view @changes="changesContentTitle" :current="current"></router-view>
     <div class="navbox">
       <div class="homenavs">
         <router-link to="/" class="flex-1">
@@ -29,7 +29,17 @@
 <script>
 
 export default {
-
+    name: 'App',
+    data () {
+      return {
+        current: 0
+      }
+    },
+    methods: {
+      changesContentTitle (current) {
+           this.current = current
+      }
+    }
 }
 </script>
 <style lang="stylus" scoped>
